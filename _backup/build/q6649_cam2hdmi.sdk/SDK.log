@@ -1,0 +1,511 @@
+18:08:38 INFO  : Launching XSDB server: xsdb.bat E:/8_software/xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+18:08:45 INFO  : XSDB server has started successfully.
+18:08:49 INFO  : Processing command line option -hwspec Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf.
+14:25:29 INFO  : Launching XSDB server: xsdb.bat E:/8_software/xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+14:25:32 INFO  : XSDB server has started successfully.
+14:25:58 INFO  : Processing command line option -hwspec Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf.
+14:25:58 INFO  : Checking for hwspec changes in the project q6649_cam2hdmi_hw_platform_0.
+15:45:34 INFO  : Saving repository preferences.
+15:45:34 INFO  : Reading in cores from local repositories: 
+		 D:\3_FPGA_new\0_AX7020\软件\device-tree-xlnx-xilinx-v2015.4\device-tree-xlnx-xilinx-v2015.4
+15:45:35 INFO  : Cleaning BSP projects in the workspace.
+16:14:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:14:21 INFO  : Sourcing of 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl' is done.
+16:14:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl
+----------------End of Script----------------
+
+16:14:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:14:46 INFO  : Sourcing of 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl' is done.
+16:14:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+16:14:48 INFO  : System reset is completed.
+16:14:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+16:14:55 INFO  : FPGA configured successfully with bitstream "Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/q6649_cam2hdmi.bit"
+16:14:55 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+16:14:56 INFO  : Hardware design information is loaded from 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/system.hdf'.
+16:15:05 INFO  : 'ps7_init' command is executed.
+16:15:05 INFO  : 'ps7_post_config' command is executed.
+16:15:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:15:06 INFO  : The application 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q0507/Debug/q0507.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:15:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/q6649_cam2hdmi.bit
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/system.hdf
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q0507/Debug/q0507.elf
+----------------End of Script----------------
+
+16:15:06 INFO  : Memory regions updated for context APU
+16:15:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:15:06 INFO  : 'con' command is executed.
+16:15:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+17:04:18 WARN  : Unexpected exception occurred.
+java.io.IOException: Command [C 401 xsdb eval "disconnect tcfchan#1"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:753)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:162)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:254)
+04:22:50 INFO  : Launching XSDB server: xsdb.bat E:/8_software/xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+04:22:52 INFO  : XSDB server has started successfully.
+04:22:56 INFO  : Restoring local repository preferences: 
+		 D:\3_FPGA_new\0_AX7020\软件\device-tree-xlnx-xilinx-v2015.4\device-tree-xlnx-xilinx-v2015.4
+04:22:58 INFO  : Processing command line option -hwspec Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf.
+04:22:58 INFO  : Checking for hwspec changes in the project q6649_cam2hdmi_hw_platform_0.
+04:23:07 INFO  : BSP Project P/device_tree_bsp_0 has been successfully migrated.
+04:23:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+04:23:22 INFO  : Sourcing of 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl' is done.
+04:23:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl
+----------------End of Script----------------
+
+04:23:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+04:23:44 INFO  : Sourcing of 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl' is done.
+04:23:45 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+04:23:47 INFO  : System reset is completed.
+04:23:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+04:23:54 INFO  : FPGA configured successfully with bitstream "Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/q6649_cam2hdmi.bit"
+04:23:54 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+04:23:55 INFO  : Hardware design information is loaded from 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/system.hdf'.
+04:24:00 INFO  : 'ps7_init' command is executed.
+04:24:01 INFO  : 'ps7_post_config' command is executed.
+04:24:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:24:03 INFO  : The application 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q0507/Debug/q0507.elf' is downloaded to processor 'ps7_cortexa9_0'.
+04:24:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/q6649_cam2hdmi.bit
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/system.hdf
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q0507/Debug/q0507.elf
+----------------End of Script----------------
+
+04:24:03 INFO  : Memory regions updated for context APU
+04:24:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:24:04 INFO  : 'con' command is executed.
+04:24:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+04:28:17 INFO  : Launching XSDB server: xsdb.bat E:/8_software/xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+04:31:17 ERROR : Timed out. 180 seconds have elapsed while waiting for XSDB server to launch.
+04:31:17 WARN  : Unexpected exception occurred.
+java.lang.Exception: java.lang.Error: Channel is waiting for Hello message
+	at org.eclipse.tcf.core.Command.<init>(Command.java:83)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager$8.<init>(XSDBCommandManager.java:384)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueTcfCmd(XSDBCommandManager.java:384)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.access$4(XSDBCommandManager.java:381)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager$7.run(XSDBCommandManager.java:376)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.Error: Channel is waiting for Hello message
+	at org.eclipse.tcf.core.AbstractChannel.sendCommand(AbstractChannel.java:874)
+	at org.eclipse.tcf.core.Command.<init>(Command.java:79)
+	... 6 more
+07:51:14 INFO  : Launching XSDB server: xsdb.bat E:/8_software/xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+07:51:30 INFO  : XSDB server has started successfully.
+07:51:34 INFO  : Restoring local repository preferences: 
+		 D:\3_FPGA_new\0_AX7020\软件\device-tree-xlnx-xilinx-v2015.4\device-tree-xlnx-xilinx-v2015.4
+07:51:35 INFO  : Processing command line option -hwspec Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf.
+07:51:35 INFO  : Checking for hwspec changes in the project q6649_cam2hdmi_hw_platform_0.
+07:51:41 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1525736060674,  Project:1525598816779
+07:51:41 INFO  : The hardware specification for project 'q6649_cam2hdmi_hw_platform_0' is different from Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf.
+07:51:41 INFO  : Copied contents of Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf into \q6649_cam2hdmi_hw_platform_0\system.hdf.
+07:51:47 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+07:51:53 INFO  : 
+07:52:05 INFO  : 
+07:52:10 INFO  : BSP Project P/device_tree_bsp_0 has been successfully migrated.
+07:52:11 INFO  : Updating hardware inferred compiler options for q0507.
+07:52:11 INFO  : Clearing existing target manager status.
+07:55:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+07:55:23 INFO  : 'fpga -state' command is executed.
+07:55:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:55:23 INFO  : Sourcing of 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl' is done.
+07:55:24 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+07:55:24 INFO  : Hardware design information is loaded from 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/system.hdf'.
+07:55:24 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+07:55:24 INFO  : 'stop' command is executed.
+07:55:26 INFO  : 'ps7_init' command is executed.
+07:55:26 INFO  : 'ps7_post_config' command is executed.
+07:55:26 INFO  : 'con' command is executed.
+07:55:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:55:26 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+07:55:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:55:27 INFO  : The application 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf' is downloaded to processor 'ps7_cortexa9_0'.
+07:55:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf
+----------------End of Script----------------
+
+07:55:27 INFO  : Memory regions updated for context APU
+07:55:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:55:27 INFO  : 'con' command is executed.
+07:55:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+07:55:28 INFO  : Disconnected from the channel tcfchan#1.
+07:55:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:55:28 INFO  : Sourcing of 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl' is done.
+07:55:29 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+07:55:30 INFO  : System reset is completed.
+07:55:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+07:55:37 INFO  : FPGA configured successfully with bitstream "Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/q6649_cam2hdmi.bit"
+07:55:37 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+07:55:37 INFO  : Hardware design information is loaded from 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/system.hdf'.
+07:55:41 INFO  : 'ps7_init' command is executed.
+07:55:41 INFO  : 'ps7_post_config' command is executed.
+07:55:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:55:42 INFO  : The application 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf' is downloaded to processor 'ps7_cortexa9_0'.
+07:55:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/q6649_cam2hdmi.bit
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/system.hdf
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf
+----------------End of Script----------------
+
+07:55:42 INFO  : Memory regions updated for context APU
+07:55:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:55:42 INFO  : 'con' command is executed.
+07:55:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+07:56:02 INFO  : Disconnected from the channel tcfchan#2.
+07:56:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:56:03 INFO  : Sourcing of 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl' is done.
+07:56:03 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+07:56:04 INFO  : System reset is completed.
+07:56:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+07:56:11 INFO  : FPGA configured successfully with bitstream "Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/q6649_cam2hdmi.bit"
+07:56:12 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+07:56:12 INFO  : Hardware design information is loaded from 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/system.hdf'.
+07:56:13 INFO  : 'ps7_init' command is executed.
+07:56:13 INFO  : 'ps7_post_config' command is executed.
+07:56:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:56:14 INFO  : The application 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf' is downloaded to processor 'ps7_cortexa9_0'.
+07:56:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/q6649_cam2hdmi.bit
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/system.hdf
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf
+----------------End of Script----------------
+
+07:56:14 INFO  : Memory regions updated for context APU
+07:56:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+07:56:14 INFO  : 'con' command is executed.
+07:56:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+07:57:42 WARN  : Unexpected exception occurred.
+java.io.IOException: Command [C 337 xsdb eval "disconnect tcfchan#3"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:753)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:162)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:254)
+07:57:45 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:24:23 INFO  : Launching XSDB server: xsdb.bat E:/8_software/xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+12:24:33 INFO  : XSDB server has started successfully.
+12:24:37 INFO  : Restoring local repository preferences: 
+		 D:\3_FPGA_new\0_AX7020\软件\device-tree-xlnx-xilinx-v2015.4\device-tree-xlnx-xilinx-v2015.4
+12:24:38 INFO  : Processing command line option -hwspec Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf.
+12:24:38 INFO  : Checking for hwspec changes in the project q6649_cam2hdmi_hw_platform_0.
+12:24:43 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1525741311102,  Project:1525736060674
+12:24:43 INFO  : The hardware specification for project 'q6649_cam2hdmi_hw_platform_0' is different from Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf.
+12:24:43 INFO  : Copied contents of Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf into \q6649_cam2hdmi_hw_platform_0\system.hdf.
+12:24:48 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:25:02 INFO  : 
+12:25:03 INFO  : Updating hardware inferred compiler options for q0508.
+12:25:03 INFO  : Clearing existing target manager status.
+12:25:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:25:36 INFO  : Sourcing of 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl' is done.
+12:25:37 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+12:25:37 INFO  : System reset is completed.
+12:25:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+12:25:44 INFO  : FPGA configured successfully with bitstream "Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/q6649_cam2hdmi.bit"
+12:25:45 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+12:25:45 INFO  : Hardware design information is loaded from 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/system.hdf'.
+12:25:48 INFO  : 'ps7_init' command is executed.
+12:25:48 INFO  : 'ps7_post_config' command is executed.
+12:25:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:25:49 INFO  : The application 'Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:25:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/q6649_cam2hdmi.bit
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/system.hdf
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf
+----------------End of Script----------------
+
+12:25:49 INFO  : Memory regions updated for context APU
+12:25:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:25:50 INFO  : 'con' command is executed.
+12:25:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+12:40:43 INFO  : Launching XSDB server: xsdb.bat E:/8_software/xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+12:40:44 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:43:44 ERROR : Timed out. 180 seconds have elapsed while waiting for XSDB server to launch.
+12:43:44 WARN  : Unexpected exception occurred.
+java.lang.Exception: java.lang.Error: Channel is waiting for Hello message
+	at org.eclipse.tcf.core.Command.<init>(Command.java:83)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager$8.<init>(XSDBCommandManager.java:384)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueTcfCmd(XSDBCommandManager.java:384)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.access$4(XSDBCommandManager.java:381)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager$7.run(XSDBCommandManager.java:376)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.Error: Channel is waiting for Hello message
+	at org.eclipse.tcf.core.AbstractChannel.sendCommand(AbstractChannel.java:874)
+	at org.eclipse.tcf.core.Command.<init>(Command.java:79)
+	... 6 more
+14:31:33 INFO  : Launching XSDB server: xsdb.bat E:/8_software/xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+14:31:44 INFO  : XSDB server has started successfully.
+14:31:50 INFO  : Restoring local repository preferences: 
+		 D:\3_FPGA_new\0_AX7020\软件\device-tree-xlnx-xilinx-v2015.4\device-tree-xlnx-xilinx-v2015.4
+14:31:51 INFO  : Processing command line option -hwspec Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf.
+14:33:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:33:34 INFO  : Sourcing of 'Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl' is done.
+14:33:35 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+14:33:35 INFO  : System reset is completed.
+14:33:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:33:42 INFO  : FPGA configured successfully with bitstream "Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/q6649_cam2hdmi.bit"
+14:33:43 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+14:33:43 INFO  : Hardware design information is loaded from 'Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/system.hdf'.
+14:33:44 INFO  : 'ps7_init' command is executed.
+14:33:44 INFO  : 'ps7_post_config' command is executed.
+14:33:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:33:44 INFO  : The application 'Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:33:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/q6649_cam2hdmi.bit
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_0/system.hdf
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf
+----------------End of Script----------------
+
+14:33:45 INFO  : Memory regions updated for context APU
+14:33:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:33:45 INFO  : 'con' command is executed.
+14:33:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+14:34:03 INFO  : Launching XSDB server: xsdb.bat E:/8_software/xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+14:34:50 INFO  : Launching XSDB server: xsdb.bat E:/8_software/xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+14:34:52 INFO  : XSDB server has started successfully.
+14:34:53 INFO  : Restoring local repository preferences: 
+		 D:\3_FPGA_new\0_AX7020\软件\device-tree-xlnx-xilinx-v2015.4\device-tree-xlnx-xilinx-v2015.4
+14:34:53 INFO  : Processing command line option -hwspec Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf.
+14:37:03 ERROR : Timed out. 180 seconds have elapsed while waiting for XSDB server to launch.
+14:37:03 WARN  : Unexpected exception occurred.
+java.lang.Exception: java.lang.Error: Channel is waiting for Hello message
+	at org.eclipse.tcf.core.Command.<init>(Command.java:83)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager$8.<init>(XSDBCommandManager.java:384)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueTcfCmd(XSDBCommandManager.java:384)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.access$4(XSDBCommandManager.java:381)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager$7.run(XSDBCommandManager.java:376)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.Error: Channel is waiting for Hello message
+	at org.eclipse.tcf.core.AbstractChannel.sendCommand(AbstractChannel.java:874)
+	at org.eclipse.tcf.core.Command.<init>(Command.java:79)
+	... 6 more
+14:37:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:37:46 INFO  : 'fpga -state' command is executed.
+14:37:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:37:46 INFO  : Sourcing of 'Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/ps7_init.tcl' is done.
+14:37:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+14:37:47 INFO  : Hardware design information is loaded from 'Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/system.hdf'.
+14:37:47 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+14:37:47 INFO  : 'stop' command is executed.
+14:37:48 INFO  : 'ps7_init' command is executed.
+14:37:48 INFO  : 'ps7_post_config' command is executed.
+14:37:48 INFO  : 'con' command is executed.
+14:37:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:37:49 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:37:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:37:49 INFO  : The application 'Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:37:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf
+----------------End of Script----------------
+
+14:37:50 INFO  : Disconnected from the channel tcfchan#1.
+14:37:50 ERROR : Invalid target. Use "connect" command to connect to hw_server/TCF agent
+14:37:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:37:50 INFO  : Sourcing of 'Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/ps7_init.tcl' is done.
+14:37:50 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+14:37:51 INFO  : System reset is completed.
+14:37:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:37:58 INFO  : FPGA configured successfully with bitstream "Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/q6649_cam2hdmi.bit"
+14:37:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:37:58 INFO  : Sourcing of 'Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/ps7_init.tcl' is done.
+14:37:58 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+14:37:58 INFO  : Hardware design information is loaded from 'Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/system.hdf'.
+14:37:59 INFO  : 'ps7_init' command is executed.
+14:37:59 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+14:37:59 INFO  : 'ps7_post_config' command is executed.
+14:37:59 INFO  : System reset is completed.
+14:38:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:38:00 ERROR : Cannot access DDR: the controller is held in reset
+14:38:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/q6649_cam2hdmi.bit
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/system.hdf
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf
+----------------End of Script----------------
+
+14:38:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:38:06 INFO  : FPGA configured successfully with bitstream "Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/q6649_cam2hdmi.bit"
+14:38:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0' command is executed.
+14:38:07 INFO  : Hardware design information is loaded from 'Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/system.hdf'.
+14:38:08 INFO  : 'ps7_init' command is executed.
+14:38:08 INFO  : 'ps7_post_config' command is executed.
+14:38:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:38:08 INFO  : The application 'Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:38:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/q6649_cam2hdmi.bit
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi_hw_platform_2/system.hdf
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q0508/Debug/q0508.elf
+----------------End of Script----------------
+
+14:38:08 INFO  : Memory regions updated for context APU
+14:38:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:38:09 INFO  : 'con' command is executed.
+14:38:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+14:38:16 INFO  : Launching XSDB server: xsdb.bat E:/8_software/xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+14:41:16 ERROR : Timed out. 180 seconds have elapsed while waiting for XSDB server to launch.
+14:41:16 WARN  : Unexpected exception occurred.
+java.lang.Exception: java.lang.Error: Channel is waiting for Hello message
+	at org.eclipse.tcf.core.Command.<init>(Command.java:83)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager$8.<init>(XSDBCommandManager.java:384)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueTcfCmd(XSDBCommandManager.java:384)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.access$4(XSDBCommandManager.java:381)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager$7.run(XSDBCommandManager.java:376)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.Error: Channel is waiting for Hello message
+	at org.eclipse.tcf.core.AbstractChannel.sendCommand(AbstractChannel.java:874)
+	at org.eclipse.tcf.core.Command.<init>(Command.java:79)
+	... 6 more
+15:02:42 INFO  : Launching XSDB server: xsdb.bat E:/8_software/xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+15:02:55 INFO  : XSDB server has started successfully.
+15:03:01 INFO  : Restoring local repository preferences: 
+		 D:\3_FPGA_new\0_AX7020\软件\device-tree-xlnx-xilinx-v2015.4\device-tree-xlnx-xilinx-v2015.4
+15:03:03 INFO  : Processing command line option -hwspec Z:/1_UnivPaper/1_Prj/13_q0508_final_ok/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf.

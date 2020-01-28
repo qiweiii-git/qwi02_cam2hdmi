@@ -1,0 +1,69 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Tue May 08 08:08:18 2018
+# Process ID: 2836
+# Current directory: Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1868 Z:\1_UnivPaper\1_Prj\11_q0503_final_2\build\q6649_cam2hdmi.xpr
+# Log file: Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/vivado.log
+# Journal file: Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'c:/Users/Administrator/AppData/Roaming/Xilinx/repo'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Administrator/AppData/Roaming/Xilinx/repo'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'z:/1_UnivPaper/1_Prj/11_q0503_final_2/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/8_software/xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 895.992 ; gain = 246.324
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 08 08:10:01 2018] Launched impl_1...
+Run output will be captured here: Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 984.328 ; gain = 56.504
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 08 08:11:02 2018] Launched synth_1...
+Run output will be captured here: Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.runs/synth_1/runme.log
+[Tue May 08 08:11:02 2018] Launched impl_1...
+Run output will be captured here: Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.runs/impl_1/runme.log
+file copy -force Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.runs/impl_1/q6649_cam2hdmi.sysdef Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf
+
+launch_sdk -workspace Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk -hwspec Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk -hwspec Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {Z:/1_UnivPaper/1_Prj/11_q0503_final_2/system/system.bd}
+Adding component instance block -- digilentinc.com:ip:axi_dynclk:1.0 - axi_dynclk_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.2 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.2 - axi_vdma_1
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_140M
+Adding component instance block -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding component instance block -- xilinx.com:ip:v_tc:6.1 - v_tc_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system> from BD file <Z:/1_UnivPaper/1_Prj/11_q0503_final_2/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 1313.016 ; gain = 94.848
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May 08 12:48:32 2018...

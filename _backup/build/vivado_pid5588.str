@@ -1,0 +1,134 @@
+/*
+
+Vivado v2015.4 (64-bit)
+SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+Process ID: 5588
+
+Current time: 	5/6/18 6:05:21 PM CST
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 7
+Version: 6.1
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 120
+Available screens: 2
+Default font: family=SimSun,name=ËÎÌו,style=plain,size=15
+
+Java version: 	1.8.0_45 64-bit
+Java home: 	E:/8_software/xilinx/Vivado/2015.4/tps/win64/jre
+
+User name: 	Administrator
+User home directory: C:/Users/Administrator
+User working directory: Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+Vivado preferences path: C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/2015.4/vivado.ini
+Vivado layouts directory: C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/2015.4/layouts
+
+GUI allocated memory:	163 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 358 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 33 MB (+31732kb) [00:00:21]
+// [Engine Memory]: 354 MB (+219601kb) [00:00:21]
+// TclEventType: PROJECT_OPEN_DIALOG
+// bF:g (cq:JFrame):  Open Project : addNotify
+// Opening Vivado Project: Z:\1_UnivPaper\1_Prj\11_q0503_final_2\build\q6649_cam2hdmi.xpr. Version: Vivado v2015.4 
+// HMemoryUtils.trashcanNow. Engine heap size: 358 MB. GUI used memory: 29 MB. Current time: 5/6/18 6:05:22 PM CST
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [Engine Memory]: 379 MB (+7929kb) [00:00:32]
+// [Engine Memory]: 417 MB (+19436kb) [00:00:52]
+// HMemoryUtils.trashcanNow. Engine heap size: 424 MB. GUI used memory: 29 MB. Current time: 5/6/18 6:05:57 PM CST
+// [Engine Memory]: 453 MB (+16158kb) [00:01:07]
+// TclEventType: IP_LOCK_CHANGE
+// [Engine Memory]: 494 MB (+19037kb) [00:01:22]
+// HMemoryUtils.trashcanNow. Engine heap size: 494 MB. GUI used memory: 29 MB. Current time: 5/6/18 6:06:22 PM CST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 48 MB (+14320kb) [00:01:30]
+// [Engine Memory]: 546 MB (+28521kb) [00:01:33]
+// [GUI Memory]: 64 MB (+13929kb) [00:01:40]
+// [GUI Memory]: 68 MB (+1221kb) [00:01:44]
+// [Engine Memory]: 580 MB (+6920kb) [00:01:44]
+// [GUI Memory]: 77 MB (+5787kb) [00:01:48]
+// [Engine Memory]: 609 MB (+465kb) [00:01:48]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'z:/1_UnivPaper/1_Prj/11_q0503_final_2/repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/8_software/xilinx/Vivado/2015.4/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 617 MB. GUI used memory: 55 MB. Current time: 5/6/18 6:06:47 PM CST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: q6649_cam2hdmi; location: Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build; part: xc7z020clg400-2
+// Tcl Message: open_project: Time (s): cpu = 00:00:44 ; elapsed = 00:01:29 . Memory (MB): peak = 816.195 ; gain = 222.887 
+dismissDialog("Open Project"); // bF:g (cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, q6649_cam2hdmi (q6649_cam2hdmi.v)]", 1); // y:k (I:JPanel, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // aa:JMenu (JPopupMenu:JComponent, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // aa:JMenu (JPopupMenu:JComponent, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa:JMenu (JPopupMenu:JComponent, cq:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ae:JMenuItem (JPopupMenu:JComponent, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// N:x (cq:JFrame): Export Hardware: addNotify
+selectCheckBox(PAResourceItoN.NewExportHardwareDialog_INCLUDE_BITSTREAM, "Include bitstream", true); // h:JCheckBox (JPanel:JComponent, N:x): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, N:x)
+dismissDialog("Export Hardware"); // N:x (cq:JFrame)
+// Tcl Message: file mkdir Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk 
+// Tcl Message: file copy -force Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.runs/impl_1/q6649_cam2hdmi.sysdef Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf  
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // aa:JMenu (JPopupMenu:JComponent, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // aa:JMenu (JPopupMenu:JComponent, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa:JMenu (JPopupMenu:JComponent, cq:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ae:JMenuItem (JPopupMenu:JComponent, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// Q:x (cq:JFrame): Launch SDK: addNotify
+// [GUI Memory]: 84 MB (+3625kb) [00:02:11]
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:x)
+dismissDialog("Launch SDK"); // Q:x (cq:JFrame)
+// bF:g (cq:JFrame):  Launch SDK : addNotify
+// Tcl Message: launch_sdk -workspace Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk -hwspec Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk -hwspec Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+dismissDialog("Launch SDK"); // bF:g (cq:JFrame)
+// [GUI Memory]: 89 MB (+127kb) [00:05:37]
+// [Engine Memory]: 643 MB (+3730kb) [00:05:37]
+// [GUI Memory]: 93 MB (+405kb) [00:08:11]
+// HMemoryUtils.trashcanNow. Engine heap size: 651 MB. GUI used memory: 67 MB. Current time: 5/6/18 6:14:47 PM CST
+// [GUI Memory]: 99 MB (+421kb) [00:19:07]
+// [GUI Memory]: 104 MB (+145kb) [00:22:37]
+// [GUI Memory]: 109 MB (+31kb) [00:38:02]
+// HMemoryUtils.trashcanNow. Engine heap size: 675 MB. GUI used memory: 93 MB. Current time: 5/6/18 6:44:47 PM CST
+// [GUI Memory]: 114 MB (+1kb) [00:44:33]
+// [Engine Memory]: 677 MB (+2101kb) [00:51:18]
+// [GUI Memory]: 121 MB (+554kb) [00:51:53]
+// [GUI Memory]: 127 MB (+142kb) [01:01:39]
+// [GUI Memory]: 133 MB (+40kb) [01:08:54]
+// HMemoryUtils.trashcanNow. Engine heap size: 699 MB. GUI used memory: 105 MB. Current time: 5/6/18 7:14:07 PM CST
+// [GUI Memory]: 141 MB (+945kb) [01:24:50]
+// [GUI Memory]: 148 MB (+297kb) [01:36:30]
+// [Engine Memory]: 713 MB (+1734kb) [01:36:30]
+// HMemoryUtils.trashcanNow. Engine heap size: 716 MB. GUI used memory: 117 MB. Current time: 5/6/18 7:41:38 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 716 MB. GUI used memory: 95 MB. Current time: 5/6/18 8:11:38 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 716 MB. GUI used memory: 70 MB. Current time: 5/6/18 8:41:38 PM CST

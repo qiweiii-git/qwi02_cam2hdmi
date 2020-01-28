@@ -1,0 +1,61 @@
+/*
+
+Vivado v2015.4 (64-bit)
+SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+Process ID: 1952
+
+Current time: 	5/8/18 8:05:51 AM CST
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 7
+Version: 6.1
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 120
+Available screens: 1
+Default font: family=SimSun,name=ËÎÌו,style=plain,size=15
+
+Java version: 	1.8.0_45 64-bit
+Java home: 	E:/8_software/xilinx/Vivado/2015.4/tps/win64/jre
+
+User name: 	Administrator
+User home directory: C:/Users/Administrator
+User working directory: Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+Vivado preferences path: C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/2015.4/vivado.ini
+Vivado layouts directory: C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/2015.4/layouts
+
+GUI allocated memory:	117 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 354 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 40 MB (+39328kb) [00:01:48]
+// [Engine Memory]: 341 MB (+205666kb) [00:01:48]
+// TclEventType: PROJECT_OPEN_DIALOG
+// HMemoryUtils.trashcanNow. Engine heap size: 357 MB. GUI used memory: 29 MB. Current time: 5/8/18 8:05:53 AM CST
+// bF:g (cq:JFrame):  Open Project : addNotify
+// Opening Vivado Project: Z:\1_UnivPaper\1_Prj\11_q0503_final_2\build\q6649_cam2hdmi.xpr. Version: Vivado v2015.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.xpr 
+// [Engine Memory]: 379 MB (+21913kb) [00:01:56]
+// TclEventType: MSGMGR_MOVEMSG
+// [GUI Memory]: 42 MB (+231kb) [00:02:12]
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// [GUI Memory]: 47 MB (+2410kb) [00:02:22]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [Engine Memory]: 402 MB (+5046kb) [00:02:27]
+// [GUI Memory]: 49 MB (+218kb) [00:03:02]
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, bF:g)
+// HMemoryUtils.trashcanNow. Engine heap size: 423 MB. GUI used memory: 29 MB. Current time: 5/8/18 8:07:48 AM CST
+// [Engine Memory]: 423 MB (+48kb) [00:03:47]

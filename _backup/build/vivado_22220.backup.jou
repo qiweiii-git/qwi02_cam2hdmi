@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Tue May 08 13:33:56 2018
+# Process ID: 22220
+# Current directory: Z:/1_UnivPaper/1_Prj/13_q0508/build
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21216 Z:\1_UnivPaper\1_Prj\13_q0508\build\q6649_cam2hdmi.xpr
+# Log file: Z:/1_UnivPaper/1_Prj/13_q0508/build/vivado.log
+# Journal file: Z:/1_UnivPaper/1_Prj/13_q0508/build\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.xpr
+add_files -norecurse Z:/1_UnivPaper/1_Prj/13_q0508/source/cam_in_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file copy -force Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.runs/impl_1/q6649_cam2hdmi.sysdef Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf
+
+launch_sdk -workspace Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk -hwspec Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf
+file copy -force Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.runs/impl_1/q6649_cam2hdmi.sysdef Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf
+
+launch_sdk -workspace Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk -hwspec Z:/1_UnivPaper/1_Prj/13_q0508/build/q6649_cam2hdmi.sdk/q6649_cam2hdmi.hdf

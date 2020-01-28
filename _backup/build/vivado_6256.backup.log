@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon May 14 11:46:30 2018
+# Process ID: 6256
+# Current directory: Z:/1_UnivPaper/1_Prj/13_q0508_final_ok/build
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8632 Z:\1_UnivPaper\1_Prj\13_q0508_final_ok\build\q6649_cam2hdmi.xpr
+# Log file: Z:/1_UnivPaper/1_Prj/13_q0508_final_ok/build/vivado.log
+# Journal file: Z:/1_UnivPaper/1_Prj/13_q0508_final_ok/build\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Z:/1_UnivPaper/1_Prj/13_q0508_final_ok/build/q6649_cam2hdmi.xpr
+INFO: [Project 1-313] Project file moved from 'Z:/1_UnivPaper/1_Prj/13_q0508/build' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'c:/Users/Administrator/AppData/Roaming/Xilinx/repo'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Administrator/AppData/Roaming/Xilinx/repo'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'z:/1_UnivPaper/1_Prj/13_q0508_final_ok/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/8_software/xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 807.293 ; gain = 210.973
+open_bd_design {Z:/1_UnivPaper/1_Prj/13_q0508_final_ok/system/system.bd}
+Adding component instance block -- digilentinc.com:ip:axi_dynclk:1.0 - axi_dynclk_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.2 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.2 - axi_vdma_1
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_140M
+Adding component instance block -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding component instance block -- xilinx.com:ip:v_tc:6.1 - v_tc_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system> from BD file <Z:/1_UnivPaper/1_Prj/13_q0508_final_ok/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 993.691 ; gain = 140.344
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May 14 11:49:44 2018...

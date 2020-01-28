@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# 
+# Start of session at: Tue May 08 07:57:44 2018
+# Process ID: 9840
+# Current directory: Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/webtalk/webtalk.log
+# Journal file: Z:/1_UnivPaper/1_Prj/11_q0503_final_2/build/q6649_cam2hdmi.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

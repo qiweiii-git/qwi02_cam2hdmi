@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon May 14 11:46:30 2018
+# Process ID: 6256
+# Current directory: Z:/1_UnivPaper/1_Prj/13_q0508_final_ok/build
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8632 Z:\1_UnivPaper\1_Prj\13_q0508_final_ok\build\q6649_cam2hdmi.xpr
+# Log file: Z:/1_UnivPaper/1_Prj/13_q0508_final_ok/build/vivado.log
+# Journal file: Z:/1_UnivPaper/1_Prj/13_q0508_final_ok/build\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Z:/1_UnivPaper/1_Prj/13_q0508_final_ok/build/q6649_cam2hdmi.xpr
+open_bd_design {Z:/1_UnivPaper/1_Prj/13_q0508_final_ok/system/system.bd}

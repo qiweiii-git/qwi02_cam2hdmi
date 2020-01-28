@@ -1,0 +1,21 @@
+set_property SRC_FILE_INFO {cfile:z:/1_UnivPaper/1_Prj/13_q0508_final_ok/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc rfile:../../system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc id:1 order:EARLY scoped_inst:u_bd_wrapper/system_i/processing_system7_0/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:z:/1_UnivPaper/1_Prj/13_q0508_final_ok/build/q6649_cam2hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc rfile:../q6649_cam2hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc id:2 order:EARLY scoped_inst:u_clk_24m/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:Z:/1_UnivPaper/1_Prj/13_q0508_final_ok/source/system.xdc rfile:../../source/system.xdc id:3} [current_design]
+set_property SRC_FILE_INFO {cfile:z:/1_UnivPaper/1_Prj/13_q0508_final_ok/system/ip/system_v_tc_0_0/system_v_tc_0_0_clocks.xdc rfile:../../system/ip/system_v_tc_0_0/system_v_tc_0_0_clocks.xdc id:4 order:LATE scoped_inst:u_bd_wrapper/system_i/v_tc_0/U0} [current_design]
+set_property SRC_FILE_INFO {cfile:z:/1_UnivPaper/1_Prj/13_q0508_final_ok/system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0_clocks.xdc rfile:../../system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0_clocks.xdc id:5 order:LATE scoped_inst:u_bd_wrapper/system_i/v_axi4s_vid_out_0/inst} [current_design]
+set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
+set_input_jitter clk_fpga_1 0.21
+set_property src_info {type:SCOPED_XDC file:1 line:24 export:INPUT save:INPUT read:READ} [current_design]
+set_input_jitter clk_fpga_0 0.3
+set_property src_info {type:SCOPED_XDC file:2 line:56 export:INPUT save:INPUT read:READ} [current_design]
+set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.2
+set_property src_info {type:XDC file:3 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property CLOCK_DEDICATED_ROUTE BACKBONE [get_nets u_clk_25m/inst/clk_in1_clk_wiz_0]
+set_property src_info {type:SCOPED_XDC file:4 line:5 export:INPUT save:INPUT read:READ} [current_design]
+set_max_delay -from [get_clocks -of_objects [get_pins u_bd_wrapper/system_i/v_tc_0/U0/clk]] -to [all_registers -clock [get_clocks -of_objects [get_pins u_bd_wrapper/system_i/v_tc_0/U0/s_axi_aclk]]] -datapath_only [get_property -min PERIOD [get_clocks -of_objects [get_pins u_bd_wrapper/system_i/v_tc_0/U0/clk]]]
+set_property src_info {type:SCOPED_XDC file:4 line:6 export:INPUT save:INPUT read:READ} [current_design]
+set_max_delay -from [get_clocks -of_objects [get_pins u_bd_wrapper/system_i/v_tc_0/U0/s_axi_aclk]] -to [all_registers -clock [get_clocks -of_objects [get_pins u_bd_wrapper/system_i/v_tc_0/U0/clk]]] -datapath_only [get_property -min PERIOD [get_clocks -of_objects [get_pins u_bd_wrapper/system_i/v_tc_0/U0/s_axi_aclk]]]
+set_property src_info {type:SCOPED_XDC file:5 line:10 export:INPUT save:INPUT read:READ} [current_design]
+set_max_delay -from [get_cells COUPLER_INST/FIFO_INST/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_reg[*]] -to [get_cells COUPLER_INST/FIFO_INST/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[*].wr_stg_inst/Q_reg_reg[*]] -datapath_only [get_property -min PERIOD [get_clocks -of_objects [get_pins u_bd_wrapper/system_i/v_axi4s_vid_out_0/inst/vid_io_out_clk]]]
+set_property src_info {type:SCOPED_XDC file:5 line:11 export:INPUT save:INPUT read:READ} [current_design]
+set_max_delay -from [get_cells COUPLER_INST/FIFO_INST/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_reg[*]] -to [get_cells COUPLER_INST/FIFO_INST/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[*].rd_stg_inst/Q_reg_reg[*]] -datapath_only [get_property -min PERIOD [get_clocks -of_objects [get_pins u_bd_wrapper/system_i/v_axi4s_vid_out_0/inst/aclk]]]
