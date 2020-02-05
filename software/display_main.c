@@ -21,7 +21,6 @@
 #include "xil_cache.h"
 #include "xparameters.h"
 #include "xiicps.h"
-#include "ov5640.h"
 #include "vdma.h"
 
 //=============================================================================

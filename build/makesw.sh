@@ -9,14 +9,14 @@
 
 FileSys='..'
 BuildDir='.build'
-BuildFileDir='build'
-BitFileDir='impl_1/'
-CopyBitFileDir='bin'
-CopyBitRoute='../../../..'
+WorkspaceDir='workspace'
+CopyRunFileDir='build'
+ElfDir='Debug'
+CopyElfFileDir='bin'
+CopyElfRoute='../../../../..'
 
 PrjName=$1
-ChipType=$2
-CpuCnt=$3
+hwName=$2
 echo "--Info: Project Name is $PrjName------"
 
 cd $FileSys
@@ -33,24 +33,26 @@ echo "--Info: Building Directory $FileSys/$BuildDir Establish---"
 cp * $BuildDir -r
 
 #building
-cd $BuildDir/$BuildFileDir
-echo "RunFw $PrjName $ChipType $CpuCnt" >> runfw.tcl
+cd $BuildDir
+mkdir $WorkspaceDir
+cp ./$CopyElfFileDir/$hwName.hdf $WorkspaceDir
+cp ./$CopyRunFileDir/runsw.tcl $WorkspaceDir
+cd $WorkspaceDir
 echo "--Info: $PrjName Project is building----"
-vivado -mode batch -source run.tcl
+xsdk -batch -source runsw.tcl
 
 #finish building
 echo "--Info: $PrjName Project finish building----"
 
-#copy the bit file
-cd $PrjName.runs/$BitFileDir
-if [ -f $PrjName.bit ]; then
-   cp $PrjName.bit $CopyBitRoute/$CopyBitFileDir
-   cp $CopyBitRoute/$BuildDir/$BuildFileDir/SDK/$PrjName.hdf $CopyBitRoute/$CopyBitFileDir
-   echo "--Info: $PrjName bit file moved to BIN-----"
+#copy the elf file
+cd ./$WorkspaceDir/$PrjName/$ElfDir
+if [ -f $PrjName.elf ]; then
+   cp $PrjName.elf $CopyElfRoute/$CopyElfFileDir
+   echo "--Info: $PrjName elf file moved to BIN-----"
    #clean
-   cd $CopyBitRoute
+   cd $CopyElfRoute
    rm -rf $BuildDir
-   echo "--Info: $PrjName bit file finish making-----"
+   echo "--Info: $PrjName elf file finish making-----"
    echo -e "\n   Success \n"
 else
    echo "--Error: $PrjName Project built failed-----"

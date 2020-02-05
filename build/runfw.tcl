@@ -1,5 +1,5 @@
 #******************************************************************************
-# run.tcl
+# runfw.tcl
 #
 # This module is the tcl script of building project.
 #
@@ -8,7 +8,7 @@
 #  1.0    Qiwei Wu       Feb. 1, 2020      Initial Release
 #******************************************************************************
 
-proc Run { buildName chipType coreNum } {
+proc RunFw { buildName chipType coreNum } {
    # create project
    create_project $buildName -part $chipType
 
@@ -27,6 +27,10 @@ proc Run { buildName chipType coreNum } {
    launch_runs synth_1 -jobs $coreNum
    wait_on_run synth_1
 
+   # HDF
+   file mkdir ./SDK
+   write_hwdef -force -file ./SDK/$buildName.hdf
+
    # implement
    launch_runs impl_1 -jobs $coreNum
    wait_on_run impl_1
@@ -37,5 +41,4 @@ proc Run { buildName chipType coreNum } {
 }
 
 # Example
-# Run qwi00_led xc7z020clg400-2 2
-Run qwi02_cam2hdmi xc7z020clg400-2 2
+# RunFw qwi00_led xc7z020clg400-2 2

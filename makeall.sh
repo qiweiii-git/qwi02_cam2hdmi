@@ -10,6 +10,7 @@ source /opt/Xilinx/Vivado/2015.4/settings64.sh
 
 MakeFwFileDir='build'
 
-PrjName=$1
 cd $MakeFwFileDir
-./makefw.sh $1
+./makefw.sh qwi02_cam2hdmi xc7z020clg400-2 2
+cd $MakeFwFileDir
+./makesw.sh qwi02_cam2hdmi qwi02_cam2hdmi
