@@ -13,10 +13,11 @@ WorkspaceDir='workspace'
 CopyRunFileDir='build'
 ElfDir='Debug'
 CopyElfFileDir='bin'
-CopyElfRoute='../../../../..'
+CopyElfRoute='../..'
 
 PrjName=$1
 hwName=$2
+PrjFsbl=$PrjName\_fsbl
 echo "--Info: Project Name is $PrjName------"
 
 cd $FileSys
@@ -32,12 +33,19 @@ echo "--Info: Building Directory $FileSys/$BuildDir Establish---"
 #copy source files
 cp * $BuildDir -r
 
-#building
+#copy files
 cd $BuildDir
 mkdir $WorkspaceDir
 cp ./$CopyElfFileDir/$hwName.hdf $WorkspaceDir
 cp ./$CopyRunFileDir/runsw.tcl $WorkspaceDir
 cd $WorkspaceDir
+echo "the_ROM_image:" >> image.bif
+echo "{" >> image.bif
+echo "   [bootloader]./$WorkspaceDir/$PrjFsbl/$ElfDir/$PrjFsbl.elf" >> image.bif
+echo "   ./$WorkspaceDir/$CopyElfRoute/$CopyElfFileDir/$PrjName.bit" >> image.bif
+echo "   ./$WorkspaceDir/$PrjName/$ElfDir/$PrjName.elf" >> image.bif
+echo "}" >> image.bif
+#building
 echo "--Info: $PrjName Project is building----"
 xsdk -batch -source runsw.tcl
 
@@ -45,14 +53,15 @@ xsdk -batch -source runsw.tcl
 echo "--Info: $PrjName Project finish building----"
 
 #copy the elf file
-cd ./$WorkspaceDir/$PrjName/$ElfDir
-if [ -f $PrjName.elf ]; then
-   cp $PrjName.elf $CopyElfRoute/$CopyElfFileDir
-   echo "--Info: $PrjName elf file moved to BIN-----"
+if [ -f BOOT.bin ]; then
+   cp BOOT.bin $CopyElfRoute/$CopyElfFileDir
+   cp $WorkspaceDir/$PrjName/$ElfDir/$PrjName.elf $CopyElfRoute/$CopyElfFileDir
+   cp $WorkspaceDir/$PrjFsbl/$ElfDir/$PrjFsbl.elf $CopyElfRoute/$CopyElfFileDir
+   echo "--Info: $PrjName BOOT.bin file moved to BIN-----"
    #clean
    cd $CopyElfRoute
    rm -rf $BuildDir
-   echo "--Info: $PrjName elf file finish making-----"
+   echo "--Info: $PrjName BOOT.bin file finish making-----"
    echo -e "\n   Success \n"
 else
    echo "--Error: $PrjName Project built failed-----"

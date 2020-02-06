@@ -36,7 +36,7 @@ cp * $BuildDir -r
 cd $BuildDir/$BuildFileDir
 echo "RunFw $PrjName $ChipType $CpuCnt" >> runfw.tcl
 echo "--Info: $PrjName Project is building----"
-vivado -mode batch -source run.tcl
+vivado -mode batch -source runfw.tcl
 
 #finish building
 echo "--Info: $PrjName Project finish building----"

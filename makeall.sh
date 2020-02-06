@@ -8,9 +8,18 @@
 #!/bin/bash
 source /opt/Xilinx/Vivado/2015.4/settings64.sh
 
-MakeFwFileDir='build'
+MakeFileDir='build'
+OutpFileDir='bin'
 
-cd $MakeFwFileDir
+if [ -d $OutpFileDir ]; then
+   echo "--Warning: Output Files Directory $OutpFileDir Exist--"
+   rm -r $OutpFileDir
+   echo "--Info: Old Output Files Directory $OutpFileDir Removing--"
+fi
+mkdir $OutpFileDir
+echo "--Info: Output Files Directory $OutpFileDir Establish---"
+
+cd $MakeFileDir
 ./makefw.sh qwi02_cam2hdmi xc7z020clg400-2 2
-cd $MakeFwFileDir
+cd $MakeFileDir
 ./makesw.sh qwi02_cam2hdmi qwi02_cam2hdmi
